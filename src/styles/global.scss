@@ -1,0 +1,20 @@
+:root {
+  --bg: #141414;
+  --fg: #e6e6e6;
+  --muted: #8c8c8c;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.app--shell {
+  padding: 32px;
+
+  code {
+    color: var(--muted);
+  }
+}
