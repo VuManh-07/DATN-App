@@ -1,7 +1,7 @@
 "use strict";
 
 import { ipcMain } from "electron";
-import config from "../config";
+import { config } from "../config";
 
 /**
  * IPC handlers, registered once after the app is ready.

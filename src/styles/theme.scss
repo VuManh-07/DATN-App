@@ -1,0 +1,49 @@
+/**
+ * Design tokens.
+ *
+ * Every colour in the app comes from here. Screens never hardcode a hex: a
+ * palette that lives in one file is a palette that can actually be changed.
+ */
+:root {
+  /* --- surfaces, darkest to lightest --- */
+  --surface-0: #0e1014; /* window background */
+  --surface-1: #15181e; /* sidebar, topbar */
+  --surface-2: #1b1f27; /* panels */
+  --surface-3: #232833; /* rows, inputs, hover */
+
+  --border-subtle: #22262f;
+  --border-strong: #333a48;
+
+  /* --- text --- */
+  --text-primary: #eef1f6;
+  --text-secondary: #9aa4b5;
+  --text-muted: #6b7484;
+
+  /* --- brand --- */
+  --brand: #dfb53c;
+  --brand-strong: #f0c955;
+  --brand-wash: rgba(223, 181, 60, 0.12);
+
+  /* --- semantic --- */
+  --success: #3ec47a;
+  --success-wash: rgba(62, 196, 122, 0.14);
+  --warning: #e8a33d;
+  --danger: #f2555a;
+  --danger-wash: rgba(242, 85, 90, 0.14);
+  --info: #4aa3f0;
+
+  /* --- layout --- */
+  --sidebar-width: 236px;
+  --topbar-height: 64px;
+  --content-max: 1320px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.35);
+
+  --transition: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+  --font-mono: "JetBrains Mono", "Cascadia Mono", Consolas, monospace;
+}

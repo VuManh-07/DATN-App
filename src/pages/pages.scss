@@ -1,0 +1,155 @@
+/* --------------------------------------------------------- dashboard */
+
+.dash--columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+
+  /* One column before the panels get too narrow to read, not at a device
+     width: the window here is resizable to anything. */
+  @media (max-width: 1100px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.dash--actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.dash--tx--label {
+  display: flex;
+  flex-direction: column;
+
+  small {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+}
+
+.dash--tx--value {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  code {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+}
+
+/* ------------------------------------------------------------ assets */
+
+.assets--native {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+
+  strong {
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  span {
+    color: var(--text-secondary);
+  }
+}
+
+.assets--token {
+  display: flex;
+  flex-direction: column;
+
+  small {
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+}
+
+/* -------------------------------------------------------------- send */
+
+.send--form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 520px;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    > span {
+      color: var(--text-secondary);
+    }
+  }
+}
+
+.send--hint {
+  font-style: normal;
+  font-size: 12px;
+  color: var(--text-muted);
+
+  &.is-error {
+    color: var(--danger);
+  }
+}
+
+/* ----------------------------------------------------------- receive */
+
+.receive--block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+.receive--qr {
+  /* The QR needs a light ground to stay scannable on the dark shell. */
+  background: #ffffff;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  line-height: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.receive--address {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 460px;
+  padding: 10px 12px;
+  background: var(--surface-3);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+}
+
+.receive--address--text {
+  flex: 1;
+  min-width: 0;
+  /* Addresses are long: wrap rather than truncate, so the whole string stays
+     readable and checkable. */
+  word-break: break-all;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.receive--address--copy .ant-typography-copy {
+  color: var(--brand);
+  font-size: 16px;
+}
+
+.receive--hint {
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-secondary);
+
+  strong {
+    color: var(--text-primary);
+  }
+}

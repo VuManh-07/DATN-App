@@ -1,0 +1,139 @@
+.ui--panel {
+  background: var(--surface-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+
+  & + .ui--panel {
+    margin-top: 20px;
+  }
+}
+
+.ui--panel--head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+
+  h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 2px 0 0;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+}
+
+.ui--panel--extra {
+  flex: 0 0 auto;
+}
+
+.ui--panel--body {
+  padding: 16px 20px;
+
+  &.is-flush {
+    padding: 0;
+  }
+}
+
+.ui--grid {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.ui--stat {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--surface-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+
+  &.tone-brand .ui--stat--icon {
+    background: var(--brand-wash);
+    color: var(--brand);
+  }
+  &.tone-success .ui--stat--icon {
+    background: var(--success-wash);
+    color: var(--success);
+  }
+  &.tone-danger .ui--stat--icon {
+    background: var(--danger-wash);
+    color: var(--danger);
+  }
+}
+
+.ui--stat--icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border-radius: var(--radius-md);
+  background: var(--surface-3);
+  color: var(--text-secondary);
+  font-size: 18px;
+}
+
+.ui--stat--text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+
+  small {
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  strong {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    /* Long balances must wrap rather than push the card wider. */
+    word-break: break-word;
+  }
+
+  em {
+    font-style: normal;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+}
+
+.ui--field {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 9px 0;
+
+  & + .ui--field {
+    border-top: 1px solid var(--border-subtle);
+  }
+}
+
+.ui--field--label {
+  flex: 0 0 160px;
+  color: var(--text-secondary);
+}
+
+.ui--field--value {
+  flex: 1;
+  min-width: 0;
+  word-break: break-all;
+
+  &.is-mono {
+    font-family: var(--font-mono);
+    font-size: 13px;
+  }
+}

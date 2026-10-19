@@ -1,0 +1,61 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+  /* A faint brand glow behind the card, so the unlock screen does not read as
+     a flat black rectangle. */
+  background:
+    radial-gradient(60% 50% at 50% 0%, rgba(223, 181, 60, 0.08), transparent),
+    var(--surface-0);
+}
+
+.login--card {
+  width: 100%;
+  max-width: 380px;
+  padding: 32px;
+  background: var(--surface-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+
+  h1 {
+    margin: 10px 0 4px;
+    font-size: 22px;
+  }
+
+  .ant-input-affix-wrapper {
+    margin-bottom: 16px;
+  }
+
+  .ant-btn {
+    margin-top: 4px;
+  }
+}
+
+.login--logo {
+  font-size: 34px;
+  color: var(--brand);
+}
+
+.login--sub {
+  margin: 0 0 22px;
+  color: var(--text-secondary);
+}
+
+.login--error {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.login--demo {
+  margin: 18px 0 0;
+  font-size: 12px;
+  color: var(--text-muted);
+
+  code {
+    color: var(--brand);
+  }
+}
